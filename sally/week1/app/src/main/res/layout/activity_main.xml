@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="342dp"
+            android:layout_height="39dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.135">
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FA8072"
+                    android:gravity="center"
+                    android:text="first"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="116dp"
+                    android:layout_height="wrap_content"
+                    android:background="#F08080"
+                    android:gravity="center"
+                    android:text="second"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="173dp"
+                    android:layout_height="wrap_content"
+                    android:background="#CD5C5C"
+                    android:gravity="center"
+                    android:text="third"
+                    android:textSize="30sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="342dp"
+            android:layout_height="340dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CD5C5C"
+                android:gravity="center"
+                android:text="third"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="169dp"
+                android:layout_height="169dp"
+                android:background="#F08080"
+                android:gravity="center"
+                android:text="second"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:background="#FA8072"
+                android:gravity="center"
+                android:text="first"
+                android:textSize="30sp" />
+
+        </FrameLayout>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:layout_width="342dp"
+            android:layout_height="168dp"
+            android:layout_marginTop="1dp"
+            app:columnCount="3"
+            app:rowCount="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#FA8072"
+                android:gravity="center"
+                android:text="first"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#FA8072"
+                android:gravity="center"
+                android:text="first"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#FA8072"
+                android:gravity="center"
+                android:text="first"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#F08080"
+                android:gravity="center"
+                android:text="second"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#F08080"
+                android:gravity="center"
+                android:text="second"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#F08080"
+                android:gravity="center"
+                android:text="second"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#CD5C5C"
+                android:gravity="center"
+                android:text="third"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#CD5C5C"
+                android:gravity="center"
+                android:text="third"
+                android:textSize="30sp" />
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="56dp"
+                android:background="#CD5C5C"
+                android:gravity="center"
+                android:text="third"
+                android:textSize="30sp" />
+
+        </androidx.gridlayout.widget.GridLayout>
+
+        <RelativeLayout
+            android:layout_width="342dp"
+            android:layout_height="91dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Week 1 Challenge Mission"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
