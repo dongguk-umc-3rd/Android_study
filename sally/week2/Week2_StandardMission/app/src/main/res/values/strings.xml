@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Week2_StandardMission</string>
+    <string name="phonetitle">전화</string>
+    <string name="shoptitle">Shop</string>
+    <string name="shopsearch">shop 검색</string>
+    <string name="video">동영상</string>
+    <string name="SNS">대학생 SNS</string>
+    <string name="campuspick">캠퍼스픽</string>
+    <string name="install">앱 설치하기</string>
+    <string name="popular">지금 인기 있는 글</string>
+
+
+</resources>
