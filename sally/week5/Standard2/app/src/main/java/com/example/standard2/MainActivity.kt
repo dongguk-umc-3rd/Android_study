@@ -21,25 +21,21 @@ class MainActivity : AppCompatActivity() {
         viewBindingNext = ActivityWriteBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-        val dataList: ArrayList<Data> =arrayListOf()
+        val roomDb = AppDatabase.getInstance(this)
 
-        dataList.apply{
-            add(Data("hello"))
-        }
 
-        val dataRVAdaptor = DataRVAdaptor(dataList)
-
-        viewBinding.rvData.adapter= dataRVAdaptor
         viewBinding.rvData.layoutManager= LinearLayoutManager(this)
 
         getResultText = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                 val stringContext = result.data?.getStringExtra(viewBindingNext.tvEditText.toString())
-                dataList.apply{
-                    add(Data(stringContext.toString()))
+                if (roomDb != null){
+                    val create = User("${stringContext}")
+                    roomDb.UserDao().insert(create)
+                    val dataList = roomDb.UserDao().selectAll()
                 }
                 Log.d("Tag","add")
-                dataRVAdaptor.notifyDataSetChanged()
+
             }
         }
 
